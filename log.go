@@ -32,8 +32,8 @@ func showLog(level string, tags []string, message interface{}) {
 	logger.Printf("%s %s:%s %v", time.Now().Format(time.RFC3339), level, strings.Join(tags, ","), message)
 }
 
-// NewLogger creates a new instance of the Log
-func NewLogger(tags []string) *Log {
+// New creates a new instance of the Log
+func New(tags []string) *Log {
 	return &Log{tags: tags}
 }
 
